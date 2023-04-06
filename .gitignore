@@ -1,0 +1,14 @@
+node_modules/
+sites-rendered-output/
+localData/
+dist/
+.yext
+.artifact-output
+sites-config/features.json
+*.local
+notes.txt
+.env
+
+.DS_Store
+.vscode
+vite.config.js.*
