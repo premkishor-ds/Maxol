@@ -1,11 +1,11 @@
-import localFavIco from "../images/favicon.png";
-import localLogo from "../images/logo.png";
+export const localFavIco = "view-source:https://www.maxol.ie/images/consumer_home/favicon.ico";
+export const localLogo = "../images/logo.png";
 export const liveHomePage = "https://www.maxol.co.uk/";
 export const stagingBaseurl = "https://store.maxol.co.uk/";
 export const maxolLogo = localLogo;
 export const favicon = localFavIco;
 export const cookieText = "By browsing maxol, you agree to ";
-export const cookiesUrl = "https://www.maxol.co.uk/corporate/cookies";
+export const cookiesUrl = "https://www.maxol.co.uk/corporate/cookies"; 
 export const experienceKey = "maxol-answer";
 export const apiKey = "eae7f7b869898be78931009e9fe3acd6";
 export const verticalKey = "locations";

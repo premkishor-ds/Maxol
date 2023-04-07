@@ -432,7 +432,7 @@ function UnwrappedGoogleMaps({
           <div className="location-name-miles">
             <h2>
               <a className="inline-block notHighlight" href="#">
-                {result.rawData.geomodifier}
+               test name
               </a>
             </h2>
           </div>
