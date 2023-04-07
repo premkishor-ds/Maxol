@@ -1,11 +1,11 @@
 import localFavIco from "../images/favicon.png";
 import localLogo from "../images/logo.png";
-export const liveHomePage = "https://www.matalan.co.uk/";
-export const stagingBaseurl = "https://store.matalan.co.uk/";
-export const matalanLogo = localLogo;
+export const liveHomePage = "https://www.maxol.co.uk/";
+export const stagingBaseurl = "https://store.maxol.co.uk/";
+export const maxolLogo = localLogo;
 export const favicon = localFavIco;
-export const cookieText = "By browsing Matalan, you agree to ";
-export const cookiesUrl = "https://www.matalan.co.uk/corporate/cookies";
+export const cookieText = "By browsing maxol, you agree to ";
+export const cookiesUrl = "https://www.maxol.co.uk/corporate/cookies";
 export const experienceKey = "maxol-answer";
 export const apiKey = "eae7f7b869898be78931009e9fe3acd6";
 export const verticalKey = "locations";
@@ -99,7 +99,7 @@ export const Openclose = `<svg xmlns="http://www.w3.org/2000/svg" class="cursor-
 <path d="M9,13.5l4.793,4.793L18.585,13.5Z" transform="translate(-9 -13.5)" />
 </svg>`;
 
-export const Matalan_marker = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 32.396 43.195">
+export const maxol_marker = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 32.396 43.195">
 <g transform="translate(-1106.871 -1030.805)">
   <path d="M14.534,42.324C2.275,24.553,0,22.729,0,16.2a16.2,16.2,0,0,1,32.4,0c0,6.531-2.275,8.355-14.534,26.126a2.026,2.026,0,0,1-3.329,0ZM16.2,22.947A6.749,6.749,0,1,0,9.449,16.2,6.749,6.749,0,0,0,16.2,22.947Z" transform="translate(1106.871 1030.805)" fill="#eb0000" />
   <g transform="translate(154 186.171)">
@@ -145,7 +145,7 @@ export const Mid_Logo =`<svg xmlns="http://www.w3.org/2000/svg" width="164" heig
 </svg>
 `;
 
-export const small_logo=`<a href="https://www.matalan.co.uk/"><svg xmlns="http://www.w3.org/2000/svg" width="164" height="64" viewBox="0 0 164 64" fill="none">
+export const small_logo=`<a href="https://www.maxol.co.uk/"><svg xmlns="http://www.w3.org/2000/svg" width="164" height="64" viewBox="0 0 164 64" fill="none">
 <path d="M164 0H0V64H164V0Z" fill="#AD1E1F"/>
 <path d="M54.3443 23.1759L54.256 23H52.4947L43.6335 40.6751L45.7262 40.6718L48.5731 35.0451H58.1776L61.0246 40.6718L63.1173 40.6751L54.3443 23.1759ZM57.3613 33.4375H49.3905L53.3765 25.4367L57.3613 33.4375Z" fill="white"/>
 <path d="M39.3566 23.0024H37.181L30.4016 38.0165L23.6222 23.0024H21.4478L19.0837 40.6753H20.954L22.9235 25.879L29.5754 40.6775L30.4016 40.6753L31.2289 40.6775L37.8797 25.879L39.8503 40.6753H41.7196L39.3566 23.0024Z" fill="white"/>

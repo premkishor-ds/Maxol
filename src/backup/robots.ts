@@ -22,6 +22,6 @@ export const render = (data: any): string => {
    * An empty robots.txt will NOT prevent any pages from being crawled.
    */
 
-  return `Sitemap: https://store.matalan.co.uk/sitemap.xml
+  return `Sitemap: https://store.maxol.co.uk/sitemap.xml
   User-agent: *`;
  };

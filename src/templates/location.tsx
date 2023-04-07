@@ -25,7 +25,7 @@ import OpenClose from "../components/commons/openClose";
 import Faq from "../components/locationDetail/Faqs";
 import { StaticData } from "../sites-global/staticData";
 import Newsletter from "../components/locatorPage/Newsletter";
-import { AnswerExperienceConfig, apiKey, experienceKey, stagingBaseurl, verticalKey, AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie, favicon, metaBots, liveHomePage, logo, matalanLogo } from "../sites-global/global";
+import { AnswerExperienceConfig, apiKey, experienceKey, stagingBaseurl, verticalKey, AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie, favicon, metaBots, liveHomePage, logo, maxolLogo } from "../sites-global/global";
 import {
   AnalyticsProvider,
   AnalyticsScopeProvider,

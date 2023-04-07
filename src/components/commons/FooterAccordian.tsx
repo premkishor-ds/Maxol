@@ -42,14 +42,14 @@ const FooterAccordian = (props: any) => {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography>{footer.c_about_matalan.headerLinksHeading}</Typography>
+            <Typography>{footer.c_about_maxol.headerLinksHeading}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              {footer.c_about_matalan.headerLinks.map((aboutMatalan: any) => {
+              {footer.c_about_maxol.headerLinks.map((aboutmaxol: any) => {
                 return (
                   <li>
-                    <Link props={aboutMatalan} />
+                    <Link props={aboutmaxol} />
                   </li>
                 );
               })}

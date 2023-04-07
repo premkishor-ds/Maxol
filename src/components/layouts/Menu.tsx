@@ -22,7 +22,7 @@ function Menu(props: any) {
           </button>
         </li>
 
-        {props.c_matalanMenu.c_header_links.map((item: any, i: number) => {
+        {props.c_maxolMenu.c_header_links.map((item: any, i: number) => {
           return (
             <>
               <li className={item.label === "Sale" ? "sales":''}>

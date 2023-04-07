@@ -89,14 +89,14 @@ and call handleMediaQueryChange function */
               </div>
               <div className="footer-block">
                 <h4 className="footer-block-title">
-                  {footer.c_about_matalan.headerLinksHeading}
+                  {footer.c_about_maxol.headerLinksHeading}
                 </h4>
                 <ul className="list-none">
-                  {footer.c_about_matalan.headerLinks.map(
-                    (aboutMatalan: any, index: number) => {
+                  {footer.c_about_maxol.headerLinks.map(
+                    (aboutmaxol: any, index: number) => {
                       return (
                         <li key={index}>
-                           <Linking props={aboutMatalan}/>
+                           <Linking props={aboutmaxol}/>
                         </li>
                       );
                     }
@@ -161,8 +161,8 @@ and call handleMediaQueryChange function */
             </span>
 
             <div className="company-logo">
-              <img src={footer.c_matalan_footer_logo.url} width={footer.c_matalan_footer_logo.width} 
-              height={footer.c_matalan_footer_logo.height}
+              <img src={footer.c_maxol_footer_logo.url} width={footer.c_maxol_footer_logo.width} 
+              height={footer.c_maxol_footer_logo.height}
               alt="footerlogo" />
             </div>
           </div>

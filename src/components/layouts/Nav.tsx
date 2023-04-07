@@ -35,18 +35,18 @@ import Linking from "../commons/Link";
           <div className="container">
             <div className="hidden lg:block  logo">
               <div className="logo-inner">
-                {props._site.c_matalan_header_logo ? (
+                {props._site.c_maxol_header_logo ? (
                   <a
                     href={
-                      props._site.c_matalan_header_logo.clickthroughUrl
-                        ? props._site.c_matalan_header_logo.clickthroughUrl
-                        : "https://www.matalan.co.uk/"
+                      props._site.c_maxol_header_logo.clickthroughUrl
+                        ? props._site.c_maxol_header_logo.clickthroughUrl
+                        : "https://www.maxol.co.uk/"
                     }
                   >
                     <img
-                      src={props._site.c_matalan_header_logo.image.url}
-                      height={props._site.c_matalan_header_logo.image.height}
-                      width={props._site.c_matalan_header_logo.image.width}
+                      src={props._site.c_maxol_header_logo.image.url}
+                      height={props._site.c_maxol_header_logo.image.height}
+                      width={props._site.c_maxol_header_logo.image.width}
                       alt="middlelogo"
                     />
                   </a>
@@ -73,19 +73,19 @@ import Linking from "../commons/Link";
             {/* This is for Midddle part logo */}
             <div className="block logo-large-mob lg:hidden logo">
               <div className="logo-inner">
-                {props._site.c_matalan_mobile_view_header_logo ? (
+                {props._site.c_maxol_mobile_view_header_logo ? (
                   <a
                     href={
-                      props._site.c_matalan_mobile_view_header_logo
+                      props._site.c_maxol_mobile_view_header_logo
                         .clickthroughUrl
-                        ? props._site.c_matalan_mobile_view_header_logo
+                        ? props._site.c_maxol_mobile_view_header_logo
                             .clickthroughUrl
-                        : "https://www.matalan.co.uk/"
+                        : "https://www.maxol.co.uk/"
                     }
                   >
                     <img
                       src={
-                        props._site.c_matalan_mobile_view_header_logo.image.url
+                        props._site.c_maxol_mobile_view_header_logo.image.url
                       }
                       alt="mobilelogo"
                     />
@@ -123,7 +123,7 @@ import Linking from "../commons/Link";
 
         <div className="main-nav" onClick={RemoveMenu}>
           <div className="container">
-            <Menu c_matalanMenu={props._site} />
+            <Menu c_maxolMenu={props._site} />
           </div>
         </div>
 

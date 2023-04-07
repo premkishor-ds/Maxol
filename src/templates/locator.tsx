@@ -24,7 +24,7 @@ import {
   metaBots,
   liveHomePage,
   favicon,
-  matalanLogo,
+  maxolLogo,
 } from "../sites-global/global";
 import Newsletter from "../components/locatorPage/Newsletter";
 import { JsonLd } from "react-schemaorg";
@@ -85,7 +85,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "author",
-          content: "Matalan",
+          content: "maxol",
         },
       },
 

@@ -18,7 +18,7 @@ import {
   favicon,
   liveHomePage,
   logo,
-  matalanLogo,
+  maxolLogo,
   metaBots,
   stagingBaseurl,
 } from "../sites-global/global";
@@ -91,7 +91,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
     title: `${
       document.c_meta_title
         ? document.c_meta_title
-        : `Matalan Stores in ${document.name} | Find a Local Store`
+        : `maxol Stores in ${document.name} | Find a Local Store`
     }`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
@@ -103,7 +103,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${
             document.c_meta_description
               ? document.c_meta_description
-              : `Use this page to find your nearest Matalan store in ${document.name} and discover the location details you need to visit us today.`
+              : `Use this page to find your nearest maxol store in ${document.name} and discover the location details you need to visit us today.`
           }`,
         },
       },
@@ -118,7 +118,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "author",
-          content: "MATALAN",
+          content: "maxol",
         },
       },
 
@@ -175,7 +175,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${
             document.c_meta_description
               ? document.c_meta_description
-              : `Use this page to find your nearest Matalan store in ${document.name} and discover the location details you need to visit us today.`
+              : `Use this page to find your nearest maxol store in ${document.name} and discover the location details you need to visit us today.`
           }`,
         },
       },
@@ -227,7 +227,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${
             document.c_meta_description
               ? document.c_meta_description
-              : `Use this page to find your nearest Matalan store in ${document.name} and discover the location details you need to visit us today.`
+              : `Use this page to find your nearest maxol store in ${document.name} and discover the location details you need to visit us today.`
           }`,
         },
       },
@@ -346,9 +346,9 @@ const Ad_Blue: Template<TemplateRenderProps> = ({
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "MATALAN",
+          name: "maxol",
           url: liveHomePage,
-          logo: matalanLogo,
+          logo: maxolLogo,
         }}
       />
       <JsonLd<BreadcrumbList>

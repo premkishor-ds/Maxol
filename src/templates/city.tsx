@@ -19,7 +19,7 @@ import {
   favicon,
   liveHomePage,
   logo,
-  matalanLogo,
+  maxolLogo,
   metaBots,
   stagingBaseurl,
 } from "../sites-global/global";
