@@ -52,9 +52,9 @@ export const config: TemplateConfig = {
   },
 };
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  console.log(document,"document");
+
   let url: any = "";
-    if(typeof document.dm_directoryParents != 'undefined' && document.dm_directoryParents.length > 0){ 
+  if (typeof document.dm_directoryParents != 'undefined' && document.dm_directoryParents.length > 0) {
     document.dm_directoryParents.map((i: any) => {
       if (i.meta.entityType.id == "ce_country") {
         url = `${i.slug}`;
@@ -63,7 +63,7 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
       }
     });
   }
-  else{
+  else {
     url = "gb/" + constant.slugify(document.name);
   }
   return url;
@@ -75,8 +75,8 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   document,
 }): HeadConfig => {
   let canonical = "";
-  
-  if(typeof document.dm_directoryChildren != 'undefined' && document.dm_directoryChildren.length > 0){ 
+
+  if (typeof document.dm_directoryChildren != 'undefined' && document.dm_directoryChildren.length > 0) {
     document.dm_directoryChildren.map((entity: any) => {
       canonical =
         entity.address.countryCode.toLowerCase().replaceAll(" ", "-") +
@@ -86,11 +86,10 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   }
 
   return {
-    title: `${
-      document.c_meta_title
+    title: `${document.c_meta_title
         ? document.c_meta_title
         : `maxol Stores in ${document.name} | Find a Local Store`
-    }`,
+      }`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
     tags: [
@@ -98,11 +97,10 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "description",
-          content: `${
-            document.c_meta_description
+          content: `${document.c_meta_description
               ? document.c_meta_description
               : `Use this page to find your nearest maxol store in ${document.name} and discover the location details you need to visit us today.`
-          }`,
+            }`,
         },
       },
       {
@@ -132,18 +130,17 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "link",
         attributes: {
           rel: "canonical",
-          href: `${
-            document.c_canonical
+          href: `${document.c_canonical
               ? document.c_canonical +
-                "/" +
-                canonical +
-                "/" +
-                document.slug +
-                ""
+              "/" +
+              canonical +
+              "/" +
+              document.slug +
+              ""
               : stagingBaseurl
-              ? stagingBaseurl + canonical + "/" + document.slug + ""
-              : "/" + document.slug + ""
-          }`,
+                ? stagingBaseurl + canonical + "/" + document.slug + ""
+                : "/" + document.slug + ""
+            }`,
         },
       },
       // /og tags
@@ -152,29 +149,27 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           property: "og:url",
-          content: `${
-            document.c_canonical
+          content: `${document.c_canonical
               ? document.c_canonical +
-                "/" +
-                canonical +
-                "/" +
-                document.slug +
-                ""
+              "/" +
+              canonical +
+              "/" +
+              document.slug +
+              ""
               : stagingBaseurl
-              ? stagingBaseurl + canonical + "/" + document.slug + ""
-              : "/" + document.slug + ""
-          }`,
+                ? stagingBaseurl + canonical + "/" + document.slug + ""
+                : "/" + document.slug + ""
+            }`,
         },
       },
       {
         type: "meta",
         attributes: {
           property: "og:description",
-          content: `${
-            document.c_meta_description
+          content: `${document.c_meta_description
               ? document.c_meta_description
               : `Use this page to find your nearest maxol store in ${document.name} and discover the location details you need to visit us today.`
-          }`,
+            }`,
         },
       },
       {
@@ -203,18 +198,17 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:url",
-          content: `${
-            document.c_canonical
+          content: `${document.c_canonical
               ? document.c_canonical +
-                "/" +
-                canonical +
-                "/" +
-                document.slug +
-                ""
+              "/" +
+              canonical +
+              "/" +
+              document.slug +
+              ""
               : stagingBaseurl
-              ? stagingBaseurl + canonical + "/" + document.slug + ""
-              : "/" + document.slug + ""
-          }`,
+                ? stagingBaseurl + canonical + "/" + document.slug + ""
+                : "/" + document.slug + ""
+            }`,
         },
       },
 
@@ -222,11 +216,10 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:description",
-          content: `${
-            document.c_meta_description
+          content: `${document.c_meta_description
               ? document.c_meta_description
               : `Use this page to find your nearest maxol store in ${document.name} and discover the location details you need to visit us today.`
-          }`,
+            }`,
         },
       },
       {
@@ -257,7 +250,7 @@ const Lubricants: Template<TemplateRenderProps> = ({
     name,
     _site,
   } = document;
-
+  console.log(document, "document");
   const templateData = { document: document, __meta: __meta };
   let url: any = "";
   document.dm_directoryParents && document.dm_directoryParents.map((i: any) => {
@@ -276,14 +269,14 @@ const Lubricants: Template<TemplateRenderProps> = ({
       name: "Home",
     },
   },
-  {
-    "@type": "ListItem",
-    position: 1,
-    item: {
-      "@id": stagingBaseurl,
-      name: StaticData.Store_locator,
-    },
-  });
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@id": stagingBaseurl,
+        name: StaticData.Store_locator,
+      },
+    });
   document.dm_directoryParents &&
     document.dm_directoryParents.map((i: any, index: any) => {
       if (i.meta.entityType.id == "ce_country") {
@@ -364,13 +357,32 @@ const Lubricants: Template<TemplateRenderProps> = ({
         {" "}
         <AnalyticsScopeProvider name={""}>
           <PageLayout global={_site}>
-
-
-            <div className="content-list city-page">
-              <div className="container-custom mx-auto">
-               {name}
-              </div>
+             <div>
+             <iframe width="560" height="315" src="https://www.maxol.ie/index.php?option=com_allvideoshare&amp;view=player&amp;vid=2&amp;pid=1&amp;format=raw"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+             </div>
+            <div className="maxolLubricants">
+              <p>{document.c_maxolLubricants.title}</p>
+              {document.c_maxolLubricants.lists.map((data:any) => {
+                return (
+                  <p>{data}</p>
+                )
+              }
+              )}
             </div>
+            <div>
+            {document.c_section.map((data:any) => {
+                return (
+                  <div>
+                    <img src={data.section.image.url} alt="" />
+                    <p>{data.section.title}</p>
+                    <p>{data.section.description}</p>
+                    <a href={data.cta.link}>{data.cta.label}</a>
+                  </div>
+                )
+              }
+              )}
+            </div>
+
           </PageLayout>
         </AnalyticsScopeProvider>
       </AnalyticsProvider>
