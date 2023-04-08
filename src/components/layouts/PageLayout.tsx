@@ -4,26 +4,27 @@ import Nav from "./Nav";
 
 type Props = {
     title?: string;
-    _site?: any;
-    global:any;
+    header:any;
+    footer:any;
     children?: React.ReactNode;
 };
   
   const PageLayout = ({
-    global,
     children,
+    header,
+    footer
   }: Props) => {
     return (
         <>
-        {/* {typeof global!="undefined"?
-            <Nav _site={global} />:''} */}
+        {typeof header!="undefined"?
+            <Nav header={header} />:''}
 
         {/* All the section under in header and footer will coming in childer node */}
                 {children}
 
-        {/* {typeof global!="undefined"?
-            <Footer footer={global} />
-            :''} */}
+        {typeof footer!="undefined"?
+            <Footer footer={footer} />
+            :''}
         </>
     );
   };

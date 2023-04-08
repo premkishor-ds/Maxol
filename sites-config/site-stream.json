@@ -5,7 +5,11 @@
   },
   "source": "knowledgeGraph",
   "fields": [
-      "name"
+      "name",
+      "c_mainSiteHeader",
+      "c_mainSiteFooter",
+      "c_bussinessSiteHeader",
+      "c_bussinessSiteFooter"
   ],
   "localization": {
     "locales": ["en"],
