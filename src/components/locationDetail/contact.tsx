@@ -25,6 +25,7 @@ const Contact = (props: any) => {
     yextDisplayCoordinate,
     c_storeInfoHeading,
     c_getDirectionsCTAText,
+    photo
   } = props;
   return (
     <>
@@ -32,6 +33,10 @@ const Contact = (props: any) => {
         <h4 className="box-title">
           {c_storeInfoHeading ? c_storeInfoHeading : "Store Details"}
         </h4>
+
+        <div className="image">
+          <img src={photo[0].image.url} alt="" />
+        </div>
 
         <div className="icon-row content-col">
           <div className="icon">

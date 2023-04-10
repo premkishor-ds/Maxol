@@ -14,16 +14,16 @@ export default function Nearby(props: any) {
   return (
     <>
       {neabyData.map((location: any, index: number) => {
-        let url = "";
-        const name: any = location.data.geomodifier?.toLowerCase();
-        const string: any = name.toString();
-        const result1: any = string.replaceAll(" ", "-");
-        const finalslug:any=constant.slugify(location.data.slug);
-        if (!location.data.slug) {
-          url = `/${location.data.id}-${result1}`;
-        } else {
-          url = `/${finalslug}`;
-        }
+        let url = location.data.name;
+        // const name: any = location.data.name;
+        // const string: any = name;
+        // const result1: any = string;
+        // const finalslug:any=constant.slugify(location.data.slug);
+        // if (!location.data.slug) {
+        //   url = `/${location.data.id}-${result1}`;
+        // } else {
+        //   url = `/${finalslug}`;
+        // }
 
         if (index > 0) {
           return (
@@ -33,11 +33,11 @@ export default function Nearby(props: any) {
                   <Link
                     className="inline-block notHighlight"
                     href={url}
-                    data-ya-track={`${location.data.geomodifier}`}
-                    eventName={`${location.data.geomodifier}`}
+                    data-ya-track={`${location.data.name}`}
+                    eventName={`${location.data.name}`}
                     rel="noopener noreferrer"
                   >
-                    {location.data.geomodifier}
+                    {location.data.name}
                   </Link>
                 </h2>
               </div>
@@ -79,25 +79,12 @@ export default function Nearby(props: any) {
                   </div>
                 )}
               </div>
-              <div className="icon-row content-col availability-col">
-                <Availability
-                  c_openForShoppingAvailibility={
-                    location.data.c_open_for_shopping
-                  }
-                  c_clickCollectAvaliability={
-                    location.data.c_click_collect_availability
-                  }
-                  c_parking_facilities={location.data.c_parking_facilities}
-                  c_fitting_rooms={location.data.c_fitting_rooms}
-                  hours={location.data.hours}
-                />
-              </div>
               <div className="button-bx">
                 <Link
                   className="btn"
                   href={url}
-                  data-ya-track={`viewstore-${location.data.geomodifier}`}
-                  eventName={`viewstore-${location.data.geomodifier}`}
+                  data-ya-track={`viewstore-${location.data.name}`}
+                  eventName={`viewstore-${location.data.mane}`}
                   rel="noopener noreferrer"
                 >
                   STORE DETAILS
