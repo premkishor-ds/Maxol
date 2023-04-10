@@ -328,7 +328,7 @@ const country: Template<TemplateRenderProps> = ({
       >
         {" "}
         <AnalyticsScopeProvider name={""}>
-          <PageLayout global={_site}>
+          <PageLayout header={_site.c_mainSiteHeader} footer={_site.c_mainSiteFooter}>
             {/* <BreadCrumbs
               name={regionNames.of(name)}
               _site={_site}
