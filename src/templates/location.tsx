@@ -317,6 +317,16 @@ const Location: Template<ExternalApiRenderData> = ({
 
           {/*Our Header and Footer in pagelayout component  */}
           <PageLayout header={_site.c_mainSiteHeader} footer={_site.c_mainSiteFooter}>
+            {/* breadcrum */}
+            {dm_directoryParents && (
+            <>
+              <BreadCrumbs
+                  name={name}
+                  parents={dm_directoryParents}
+                  address={address}
+                  locale={document.meta.locale}  ></BreadCrumbs>
+            </>
+          )}
 
             <div className="container">
               <div className='banner-text banner-dark-bg justify-center text-center'>
@@ -355,12 +365,12 @@ const Location: Template<ExternalApiRenderData> = ({
               fuelsAvailableLabel={c_fuelsAvailableLabel}
               fuelsType={c_fuelsType}
               fuelCardsAcceptedLabel={c_fuelCardsAcceptedLabel}
-              fuelCardsAccepted={c_fuelCardsAccepted} 
+              fuelCardsAccepted={c_fuelCardsAccepted}
             />
 
             <About about={c_about} />
 
-            <EngineCare engineCare={c_engineCare}/>
+            <EngineCare engineCare={c_engineCare} />
 
             {/* Nearby Section */}
             <div className="nearby-sec">
