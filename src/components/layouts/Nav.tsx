@@ -29,57 +29,50 @@ const Nav = (props: any) => {
   };
   return (
     <>
-      <div>
-        <div>
-          <div className="icon">
-            {/* <img src="" alt="" /> */}
-            <a href="">
-
-            </a>
-          </div>
-          <div>
-            <div className="top-nav">
-              <ul className="">
-                {props.header?.topNavigation &&
-                  props.header?.topNavigation.map((data: any) => {
-                    return (
-                      <li className="">
-                        <a href={data.link}>{data.label}</a>
-                      </li>
-                    );
-                  })}
-              </ul>
+      <div className="site-header">
+        <div className="header-top">
+          <div className="container">
+            <div className="hidden lg:block  logo">
+              <div className="logo-inner">
+                <a href="">
+                  <img src="" />
+                </a>
+              </div>
             </div>
-            <div className="social-icon">
-              <ul className="">
-                {props.header?.socialIcon &&
+            <ul className="top-hdr-links">
+              {props.header?.topNavigation &&
+                props.header?.topNavigation.map((data: any) => {
+                  return (
+                    <li className="px-4 inline">
+                     <a href={data.link}>{data.label}</a>
+                    </li>
+                  );
+                })}
+            </ul>
+            <ul className="top-hdr-links">
+            {props.header?.socialIcon &&
                   props.header?.socialIcon.map((data: any) => {
-                    return (
-                      <li className="">
-                        <a href={data.cta.link}>
-                          <img src={data.image.url}
-                            className="" /> </a>
-                      </li>
-                    );
-                  })}
-              </ul>
-            </div>
-          </div>
-          <div className="main-nav">
-            <ul className="">
-              {props.header?.mainNavigation &&
+                  return (
+                    <li className="px-4 inline">
+                      <a href={data.cta.link}>
+                        <img src={data.image.url} 
+                          className="top-icons" /> </a>
+                    </li>
+
+                  );
+                })}
+            </ul>
+            <ul className="top-hdr-links">
+            {props.header?.mainNavigation &&
                 props.header?.mainNavigation.map((data: any) => {
                   return (
-                    <li className="">
+                    <li className="px-4 inline">
                       <a href={data.link}>{data.label}</a>
                     </li>
                   );
                 })}
             </ul>
           </div>
-        </div>
-        <div>
-
         </div>
       </div>
     </>

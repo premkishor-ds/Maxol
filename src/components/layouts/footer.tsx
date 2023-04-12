@@ -47,47 +47,49 @@ const Footer = (props: any) => {
   return (
     <>
       <footer className="site-footer">
-        <div>
-          <div className="top">
-            <div className="logo">
-
-            </div>
-            <div className="contact-us">
-              <p>{footer.contactUsTitle}</p>
-              <div className="address">
-                <p>{footer.address.line1}</p>
-                <p>{footer.address.line2}</p>
-                <p>{footer.address.line3}</p>
-                <p><span>{footer.address.city}</span>,<span>{footer.address.postalCode}</span>,<span>{footer.address.country}</span></p>
-              </div>
-              <p className="">{footer.phone}</p>
-              <p className="view-map">{footer.expandMap}</p>
-            </div>
-            <div className="social-icon">
-            <p>{footer.joinTheChatterLabel}</p>
-              <ul className="">
-                {footer.socialIcons &&
-                  footer.socialIcons.map((data: any) => {
-                    return (
-                      <li className="">
-                        <a href={data.cta.link}>
-                          <img src={data.image.url}
-                            className="" /> </a>
-                      </li>
-                    );
-                  })}
-              </ul>
-            </div>
+        <div className="container">
+          <div className="company-logo">
+            <img src="" />
           </div>
-          <div className="bottom">
-            <div>
-              <p>{footer.copyrightDescription}</p>
-              <a href="">{footer.expandMap}</a>
+
+          <div className="link-sec-footer ">
+            <div className="footer-block">
+              <h4 className="footer-block-title">
+                {footer.contactUsTitle}
+              </h4>
+              <p>{footer.address.line1}</p>
+              <p>{footer.address.line2}</p>
+              <p>{footer.address.line3}</p>
+              <p><span>{footer.address.city}</span>,<span>{footer.address.postalCode}</span>,<span>{footer.address.country}</span></p>
             </div>
+            <p className="">{footer.phone}</p>
+            <p className="view-map">{footer.expandMap}</p>
           </div>
         </div>
-      </footer>
-
+        {/* icons */}
+        <div className="copyright-bx">
+          <h4 className="footer-block-title">{footer.joinTheChatterLabel}</h4>
+          <ul className="flex-row mt-4 flex w-full mb-3 app-icons">
+            {footer.socialIcons &&
+              footer.socialIcons.map((data: any) => {
+                return (
+                  <>
+                    <li className="mr-3">
+                      <a href={data.cta.link}>
+                        <img src={data.image.url}
+                          className="" /> </a>
+                    </li>
+                  </>
+                );
+              })}
+          </ul>
+          {/* footer bottom */}
+          <span className="text-xs flex-wrap" data-copyright="">
+            <p>{footer.copyrightDescription}</p>
+            <a href="">{footer.expandMap}</a>
+          </span>
+        </div>
+      </footer >
       <CookieConsent
         buttonText={StaticData.CookiebuttonText}
         buttonStyle={{
