@@ -89,7 +89,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   return {
     title: `${document.c_meta_title
       ? document.c_meta_title
-      : `maxol Stores in ${document.name} | Find a Local Store`
+      : `ROSA Coffee - The Maxol Group`
       }`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
@@ -100,7 +100,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           name: "description",
           content: `${document.c_meta_description
             ? document.c_meta_description
-            : `Use this page to find your nearest maxol store in ${document.name} and discover the location details you need to visit us today.`
+            : `The Maxol Group - Fuel For All Engines. Maxol is Irelands leading independent oil company`
             }`,
         },
       },

@@ -1,9 +1,8 @@
-export const localFavIco = "view-source:https://www.maxol.ie/images/consumer_home/favicon.ico";
 export const localLogo = "../images/logo.png";
 export const liveHomePage = "https://www.maxol.co.uk/";
 export const stagingBaseurl = "https://store.maxol.co.uk/";
 export const maxolLogo = localLogo;
-export const favicon = localFavIco;
+export const favicon = "https://stations.maxol.ie/permanent-b0b701/assets/images/favicons/primary/favicon.12f14dd7.ico";
 export const cookieText = "By browsing maxol, you agree to ";
 export const cookiesUrl = "https://www.maxol.co.uk/corporate/cookies"; 
 export const experienceKey = "maxol-answer";

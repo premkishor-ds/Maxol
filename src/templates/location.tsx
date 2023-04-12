@@ -20,11 +20,8 @@ import { fetch } from "@yext/pages/util";
 import About from "../components/locationDetail/About";
 import CustomMap from "../components/locationDetail/CustomMap";
 import BreadCrumbs from "../components/layouts/Breadcrumb";
-import StoreHighlight from "../components/locationDetail/SoreHighlight";
 import OpenClose from "../components/commons/openClose";
-import Faq from "../components/locationDetail/Faqs";
 import { StaticData } from "../sites-global/staticData";
-import Newsletter from "../components/locatorPage/Newsletter";
 import { AnswerExperienceConfig, apiKey, experienceKey, stagingBaseurl, verticalKey, AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie, favicon, metaBots, liveHomePage, logo, maxolLogo } from "../sites-global/global";
 import {
   AnalyticsProvider,
@@ -72,7 +69,9 @@ export const config: TemplateConfig = {
       "c_fuelCardsAcceptedLabel",
       "c_fuelCardsAccepted",
       "c_about",
-      "c_engineCare"
+      "c_engineCare",
+      "c_meta_title",
+      "c_meta_description"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -102,128 +101,118 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
  * NOTE: This currently has no impact on the local dev path. Redirects will be setup on
  * a new deploy.
  */
-// export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
-//   relativePrefixToRoot,
-//   path,
-//   document,
-// }): HeadConfig => {
-//   return {
-//     title: document.c_meta_title ? document.c_meta_title : ` Matalan ${document.geomodifier} Store - Online Clothes Store`,
-//     charset: "UTF-8",
-//     viewport: "width=device-width, initial-scale=1",
-//     tags: [
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "description",
-//           content: `${document.c_meta_description ? document.c_meta_description : `Visit Matalan ${document.geomodifier} Store | Matalan is your local great value family retailer shop. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.`}`,
-//         },
-//       },
+export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
+  relativePrefixToRoot,
+  path,
+  document,
+}): HeadConfig => {
+  return {
+    title: document.c_meta_title ? document.c_meta_title : ` Matalan ${document.name} Store - Online Clothes Store`,
+    charset: "UTF-8",
+    viewport: "width=device-width, initial-scale=1",
+    tags: [
+      {
+        type: "meta",
+        attributes: {
+          name: "description",
+          content: `${document.c_meta_description ? document.c_meta_description : `Visit Matalan ${document.name} Store | Matalan is your local great value family retailer shop. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.`}`,
+        },
+      },
 
 
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "author",
-//           content: "Matalan",
-//         },
-//       },
+      {
+        type: "meta",
+        attributes: {
+          name: "author",
+          content: "Matalan",
+        },
+      },
 
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "robots",
-//           content: metaBots,
-//         },
-//       },
+      {
+        type: "meta",
+        attributes: {
+          name: "robots",
+          content: metaBots,
+        },
+      },
 
-//       {
-//         type: "link",
-//         attributes: {
-//           rel: "canonical",
-//           href: `${document._site.c_canonical ? document.c_canonical : stagingBaseurl}${document.slug ? document.slug : `${document.id}-${document.geomodifier.toLowerCase().replace(' ', '-')}`}`,
-//         },
-//       },
+      {
+        type: "link",
+        attributes: {
+          rel: "canonical",
+          href: "#",
+        },
+      },
 
-//       {
-//         type: "meta",
-//         attributes: {
-//           property: "og:description",
-//           content: `${document.c_meta_description ? document.c_meta_description : `Visit Matalan ${document.geomodifier} Store | Matalan is your local great value family retailer shop. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.`}`,
-//         },
-//       },
-//       {
-//         type: "link",
-//         attributes: {
-//           rel: "shortcut icon",
-//           href: favicon,
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           property: "og:title",
-//           content: document.c_meta_title ? document.c_meta_title : ` Matalan ${document.geomodifier} Store - Online Clothes Store`,
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           property: "og:url",
-//           content: `${document._site.c_canonical ? document.c_canonical : stagingBaseurl
-//             }${document.slug ? document.slug : `${document.id}-${document.geomodifier.toLowerCase().replace(' ', '-')}`}`,
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           property: "og:image",
-//           content: favicon,
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:card",
-//           content: "summary",
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:url",
-//           content: `${document._site.c_canonical ? document.c_canonical : stagingBaseurl
+      {
+        type: "meta",
+        attributes: {
+          property: "og:description",
+          content: `${document.c_meta_description ? document.c_meta_description : `Visit Matalan ${document.geomodifier} Store | Matalan is your local great value family retailer shop. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.`}`,
+        },
+      },
+      {
+        type: "link",
+        attributes: {
+          rel: "shortcut icon",
+          href: favicon,
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:title",
+          content: document.c_meta_title ? document.c_meta_title : ` Matalan ${document.geomodifier} Store - Online Clothes Store`,
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:url",
+          content: "#",
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          property: "og:image",
+          content: favicon,
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:card",
+          content: "summary",
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:url",
+          content: "#",
+        },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:description",
+          content: `${document.c_meta_description ? document.c_meta_description : `Visit Matalan ${document.geomodifier} Store | Matalan is your local great value family retailer shop. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.`}`,
+        },
 
-//             }${document.slug ? document.slug : `${document.id}-${document.geomodifier.toLowerCase()}`}`,
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:description",
-//           content: `${document.c_meta_description ? document.c_meta_description : `Visit Matalan ${document.geomodifier} Store | Matalan is your local great value family retailer shop. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.`}`,
-//         },
+      },
+      {
+        type: "meta",
+        attributes: {
+          name: "twitter:image",
+          content: "https://a.mktgcdn.com/p-sandbox/VgddlDjYzDF07X3Tw-BttjNIoMwYUaCyslD_8Khf61E/2000x1333.jpg",
+        },
+      }
+      /// twitter tag
+    ],
 
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "twitter:image",
-//           content: "https://a.mktgcdn.com/p-sandbox/VgddlDjYzDF07X3Tw-BttjNIoMwYUaCyslD_8Khf61E/2000x1333.jpg",
-//         },
-//       },
-//       {
-//         type: "meta",
-//         attributes: {
-//           name: "google-site-verification",
-//           content: "iWn62N3m6trq8ikZhoq2vhIQdwgVEps95PiP2uisvRE",
-//         },
-//       },
-//       /// twitter tag
-//     ],
-
-//   };
-// };
+  };
+};
 type ExternalApiData = TemplateProps & { externalApiData: nearByLocation };
 export const transformProps: TransformProps<ExternalApiData> = async (
   data: any
